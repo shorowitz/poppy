@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack --progress --colors",
+    "dev-server": "nodemon server.js localhost 8080",
+    "dev-client": "webpack-dev-server --port 3000"
   },
   "babel": {
-    "presets": ["env", "react"]
+    "presets": [
+      "env",
+      "react"
+    ]
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,12 @@
   },
   "homepage": "https://github.com/shorowitz/poppy#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "jquery": "^3.2.1",
+    "morgan": "^1.8.1",
+    "pg-promise": "^5.6.7",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },

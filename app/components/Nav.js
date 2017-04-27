@@ -1,17 +1,19 @@
 const React = require('react');
 const NavLink = require('react-router-dom').NavLink;
 
-function Nav () {
-  return (
-    <ul className='nav'>
-      <li>
-        <NavLink exact activeClassName='active' to='/'>Home</NavLink>
-      </li>
-      <li>
-       <NavLink activeClassName='active' to='/search'>Search</NavLink>
-     </li>
-    </ul>
-  )
+class Nav extends React.Component {
+
+  render() {
+    const style = {
+      position: 'fixed'
+    }
+
+    return (
+      <div className='nav' style={style}>
+        <i className="fa fa-bars" aria-hidden="true"></i>
+      </div>
+    )
+  }
 }
 
 module.exports = Nav;

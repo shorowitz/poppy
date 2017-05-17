@@ -15,8 +15,8 @@ class Hero extends React.Component {
         className='hero-container'
         style={style}>
         <div>
-          <h1>Poppy</h1>
-          <h2>Lorem Ipsum Sara-Carrie</h2>
+          <h1>OKCactus</h1>
+          <h2>Lorem Ipsum</h2>
         </div>
         <div className='arrow-box'>
         </div>

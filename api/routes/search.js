@@ -4,8 +4,12 @@ const db = require('../db/pg');
 const dotenv = require('dotenv');
 dotenv.load();
 
-search.get('/', db.getPlants, (req, res) => {
+search.post('/', db.getPlants, (req, res) => {
   res.send(res.data)
 })
+
+// search.get('/:light-id', db.getPlantsNoWater, (req, res) =>{
+//   res.send(res.data)
+// })
 
 module.exports = search;

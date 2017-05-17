@@ -25,10 +25,10 @@ class WaterOptions extends React.Component {
   render() {
     return (
       <div>
-        LIGHT CONDITIONS
+        WATER FREQUENCY
         <div>
           <label>
-            Where are your windows?
+            How often can you check on your plant?
             <select onChange={this.handleChange}>
               <option value="-1">Select Water Frequency</option>
               <option value="0">Check two or three times a week - Keep the soil lightly moist</option>

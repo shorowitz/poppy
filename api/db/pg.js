@@ -14,16 +14,20 @@ var cn =
 var db = pgp(cn);
 
 function getPlants (req, res, next) {
-  db.any(`SELECT * FROM plants
-    WHERE id = $1`, [2])
-  .then(function (data) {
-    console.log(data)
-    res.data = data
-    next();
-  })
-  .catch(function(error) {
-    console.log(error)
-  })
+  if (req.body.waterid != 3) {
+    db.any(`SELECT * FROM plants
+      WHERE id = $1`, [parseInt(req.body.lightid)])
+    .then(function (data) {
+      res.data = data
+      next();
+    })
+    .catch(function(error) {
+      console.log(error)
+    })
+  } else {
+    
+  }
 }
+
 
 module.exports.getPlants = getPlants;

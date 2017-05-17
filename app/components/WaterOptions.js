@@ -31,9 +31,9 @@ class WaterOptions extends React.Component {
             How often can you check on your plant?
             <select onChange={this.handleChange}>
               <option value="-1">Select Water Frequency</option>
-              <option value="0">Check two or three times a week - Keep the soil lightly moist</option>
-              <option value="1">Check once or twice a week - Let top inch of soil dry</option>
-              <option value="2">Check every one or two weeks - Let the soil dry completely</option>
+              <option value="0">Two or three times a week - Keep the soil lightly moist</option>
+              <option value="1">Once or twice a week - Let top inch of soil dry</option>
+              <option value="2">Every one or two weeks - Let the soil dry completely</option>
               <option value="3">I Don't Care!</option>
             </select>
           </label>

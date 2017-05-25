@@ -5,7 +5,7 @@ class WaterOptions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: "-1"
+      id: "0"
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -30,11 +30,11 @@ class WaterOptions extends React.Component {
           <label>
             How often can you check on your plant?
             <select onChange={this.handleChange}>
-              <option value="-1">Select Water Frequency</option>
-              <option value="0">Two or three times a week - Keep the soil lightly moist</option>
-              <option value="1">Once or twice a week - Let top inch of soil dry</option>
-              <option value="2">Every one or two weeks - Let the soil dry completely</option>
-              <option value="3">I Don't Care!</option>
+              <option value="0">Select Water Frequency</option>
+              <option value="1">Two or three times a week - Keep the soil lightly moist</option>
+              <option value="2">Once or twice a week - Let top inch of soil dry</option>
+              <option value="3">Every one or two weeks - Let the soil dry completely</option>
+              <option value="4">I Don't Care!</option>
             </select>
           </label>
         </div>

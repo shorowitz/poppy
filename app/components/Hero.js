@@ -26,7 +26,7 @@ class Hero extends React.Component {
         }
       },
       arrow: {
-        height: 50,
+        height: 1,
         width: '100%',
         backgroundColor: '#fff',
         position: 'absolute',
@@ -47,6 +47,7 @@ class Hero extends React.Component {
             <h2>lorem ipsum dolor, sit amet</h2>
         </div>
         <div
+          className='arrow'
           style={style.arrow}>
         </div>
       </div>

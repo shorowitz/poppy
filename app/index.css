@@ -15,3 +15,35 @@ h1, h2 {
 .main-container{
   margin: 0;
 }
+
+/****************************************/
+/********** Hero Arrow Styles ***********/
+/****************************************/
+.hero-container > .arrow:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  width: 69%;
+  height: 40px;
+  top: -40px;
+  background-color: #fff;
+  -webkit-transform: skew(-40deg);
+  -moz-transform: skew(-40deg);
+  -o-transform: skew(-40deg);
+  -ms-transform: skew(-40deg);
+  transform: skew(45deg);
+}
+.hero-container > .arrow:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  width: 32%;
+  height: 40px;
+  top: -40px;
+  background-color: #fff;
+  -webkit-transform: skew(40deg);
+  -moz-transform: skew(40deg);
+  -o-transform: skew(40deg);
+  -ms-transform: skew(40deg);
+  transform: skew(-45deg);
+}

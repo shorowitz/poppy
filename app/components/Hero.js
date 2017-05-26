@@ -6,23 +6,27 @@ class Hero extends React.Component {
     const style = {
       main: {
         position: 'relative',
+        height: '100vh',
         background: 'url("../assets/hero-img.jpg")',
         backgroundSize: 'cover',
-        backgroundPosition: '50% 90%',
-        height: '100vh'
+        backgroundPosition: '50% 100%',
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center'
       },
       headerText: {
-        color: '#243d46',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-end',
-        justifyContent: 'center',
-        border: '1px solid blue',
-        height: '100vh',
-        paddingRight: 160,
+        fontFamily: 'Arvo',
+        textAlign: 'right',
+        marginRight: '10%',
         h1: {
-          fontSize: 100,
+          fontSize: '10em',
+          fontWeight: 700,
           color: '#fff'
+        },
+        h2: {
+          fontSize: '2.3em',
+          fontWeight: 400,
+          color: '#243d46'
         }
       },
       arrow: {
@@ -44,7 +48,10 @@ class Hero extends React.Component {
               style={style.headerText.h1}>
                 OKCactus.
             </h1>
-            <h2>lorem ipsum dolor, sit amet</h2>
+            <h2
+              style={style.headerText.h2}>
+                lorem ipsum dolor, sit amet
+            </h2>
         </div>
         <div
           className='arrow'

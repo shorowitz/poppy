@@ -1,15 +1,11 @@
 body {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
   margin: 0 auto;
+  font-size: 10px;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
   margin: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .main-container{
@@ -27,10 +23,10 @@ h1, h2 {
   height: 40px;
   top: -40px;
   background-color: #fff;
-  -webkit-transform: skew(-40deg);
-  -moz-transform: skew(-40deg);
-  -o-transform: skew(-40deg);
-  -ms-transform: skew(-40deg);
+  -webkit-transform: skew(45deg);
+  -moz-transform: skew(45deg);
+  -o-transform: skew(45deg);
+  -ms-transform: skew(45deg);
   transform: skew(45deg);
 }
 .hero-container > .arrow:after {
@@ -41,9 +37,9 @@ h1, h2 {
   height: 40px;
   top: -40px;
   background-color: #fff;
-  -webkit-transform: skew(40deg);
-  -moz-transform: skew(40deg);
-  -o-transform: skew(40deg);
-  -ms-transform: skew(40deg);
+  -webkit-transform: skew(-45deg);
+  -moz-transform: skew(-45deg);
+  -o-transform: skew(-45deg);
+  -ms-transform: skew(-45deg);
   transform: skew(-45deg);
 }

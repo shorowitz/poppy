@@ -1,6 +1,8 @@
 var path = require('path');
 var HTMLWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack')
+var Dotenv = require('dotenv-webpack');
+
 
 module.exports = {
   entry: './app/index.js',
@@ -20,6 +22,9 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin({
     multiStep: true
+  }),
+    new Dotenv({
+      path: './.env'
     })
   ],
   devServer: {

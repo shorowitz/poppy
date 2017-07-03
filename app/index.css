@@ -43,3 +43,7 @@ h1, h2, h3, h4, h5 {
   -ms-transform: skew(-45deg);
   transform: skew(-45deg);
 }
+
+.instafeed_item {
+  display: inline-block;
+}

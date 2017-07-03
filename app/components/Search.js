@@ -62,6 +62,7 @@ class Search extends React.Component {
   }
 
   render() {
+    const instafeedTarget = 'instafeed';
     return (
       <div>
         {this.state.results === null ? (
@@ -77,7 +78,7 @@ class Search extends React.Component {
             </form>
           </div>
         ):(
-          <ResultGrid results={this.state.results} onClick={this.handleReset}/>
+            <ResultGrid results={this.state.results} onClick={this.handleReset}/>
         )}
     </div>
 

@@ -2,6 +2,7 @@ const React = require('react');
 const $ = require('jquery');
 const Insta = require('./Insta');
 
+
 class ResultGrid extends React.Component {
 
   constructor(props){

@@ -1,7 +1,8 @@
 var path = require('path');
 var HTMLWebpackPlugin = require('html-webpack-plugin');
-var webpack = require('webpack')
-var Dotenv = require('dotenv-webpack');
+var webpack = require('webpack');
+var dotenv = require('dotenv');
+dotenv.load();
 
 
 module.exports = {
@@ -22,10 +23,14 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin({
     multiStep: true
-  }),
-    new Dotenv({
-      path: './.env'
-    })
+    }),
+    new webpack.DefinePlugin({
+    'process.env': {
+      'INSTA_TOKEN' : JSON.stringify(process.env.INSTA_TOKEN),
+      'INSTA_USER' : JSON.stringify(process.env.INSTA_USER),
+      'INSTA_CLIENT' : JSON.stringify(process.env.INSTA_CLIENT)
+    }
+  })
   ],
   devServer: {
     historyApiFallback: true,

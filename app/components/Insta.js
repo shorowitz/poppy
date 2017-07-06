@@ -18,15 +18,18 @@ class Insta extends React.Component {
   render() {
     const instafeedTarget = 'instafeed-' + this.getConcise(this.props.index);
     const plant = this.getConcise(this.props.plant);
+    const client = process.env.INSTA_CLIENT;
+    const user = process.env.INSTA_USER;
+    const token = process.env.INSTA_TOKEN;
 
       return (
         <div id={instafeedTarget}>
          <Instafeed
            target={instafeedTarget}
            tagName={`${plant}`}
-           clientId='039ffc026c2648ad87e0a59dab513102'
-           userId='5384738351'
-           accessToken='5384738351.ba4c844.fe772b69f89049eba4d3dacecbb2bd88'
+           clientId={`${client}`}
+           userId={`${user}`}
+           accessToken={`${token}`}
            limit='5'
            ref='instafeed'
            resolution='low_resolution'

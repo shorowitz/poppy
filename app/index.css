@@ -8,12 +8,17 @@ body {
   margin: 0;
 }
 
+.instafeed_item {
+  display: inline-block;
+}
+
+
 /******************************************/
 /*************** Default Fonts ************/
 /******************************************/
 h1, h2, h3, h4, h5 {
   margin: 0;
-  font-family: 'Arvo';
+  font-family: "Arvo";
 }
 h1 {
   font-size: 10em;
@@ -64,6 +69,21 @@ h3 {
   transform: skew(-45deg);
 }
 
-.instafeed_item {
-  display: inline-block;
+/******************************************/
+/*************** Form Structure ***********/
+/******************************************/
+.form-container {
+  display: flex;
+}
+.form-container .search-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6%;
+}
+.form-container .form-bg {
+  height: 50vh;
+  width: 50%;
+  padding: 0 6%;
 }

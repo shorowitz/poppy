@@ -1,5 +1,7 @@
 const React = require('react');
 const $ = require('jquery');
+const Insta = require('./Insta');
+
 
 class ResultGrid extends React.Component {
 
@@ -24,7 +26,6 @@ class ResultGrid extends React.Component {
       }
     }
 
-
     return (
       <div>
       <button onClick={this.handleClick}>Search Again</button>
@@ -33,7 +34,7 @@ class ResultGrid extends React.Component {
       <div className='result-list'>
         {this.props.results.map(function (result, index) {
           return (
-            <div key={result.english_name}>
+            <div key={result.botanical_name}>
               <div id={result.english_name} style={getImage(result.image_url)}></div>
               <div>
                 <h4>{ result.english_name }</h4>
@@ -41,6 +42,7 @@ class ResultGrid extends React.Component {
                 <p>{ result.frequency }</p>
                 <p>{ result.instruction }</p>
               </div>
+              <Insta plant={result.english_name} index={result.botanical_name}/>
             </div>
             )
           })}

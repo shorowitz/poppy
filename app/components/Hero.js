@@ -1,5 +1,6 @@
 const React = require('react');
 
+
 class Hero extends React.Component {
 
   render() {

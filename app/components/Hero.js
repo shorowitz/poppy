@@ -16,16 +16,13 @@ class Hero extends React.Component {
         alignItems: 'center'
       },
       headerText: {
-        fontFamily: 'Arvo',
         textAlign: 'right',
         marginRight: '10%',
         h1: {
-          fontSize: '10em',
           fontWeight: 700,
           color: '#fff'
         },
         h2: {
-          fontSize: '2.3em',
           fontWeight: 400,
           color: '#243d46'
         }

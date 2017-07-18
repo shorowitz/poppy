@@ -26,18 +26,10 @@ class LightOptions extends React.Component {
 
   render() {
     const style = {
-      main: {
-        display: 'flex'
-      },
       form: {
-        width: '50%',
         background: '#faf9f9',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'flex-end',
         textAlign: 'right',
-        padding: '0 6%',
+        alignItems: 'flex-end',
         h3: {
           color: '#b0899b'
         },
@@ -46,17 +38,14 @@ class LightOptions extends React.Component {
         }
       },
       image: {
-        height: '50vh',
-        width: '50%',
         background: 'url("../assets/search-image1.jpg")',
-        backgroundSize: 'cover',
-        padding: '0 6%'
+        backgroundSize: 'cover'
       }
     }
 
     return (
-      <div style={style.main}>
-        <div style={style.form} className="search-form">
+      <div className="form-container">
+        <div className="search-form" style={style.form}>
 
           <h3 style={style.form.h3}> Light <br /> Conditions </h3>
 
@@ -76,7 +65,7 @@ class LightOptions extends React.Component {
           </div>
         </div>
 
-        <div style={style.image}>
+        <div className="form-bg" style={style.image}>
         </div>
       </div>
     )

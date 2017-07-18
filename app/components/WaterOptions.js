@@ -51,7 +51,7 @@ class WaterOptions extends React.Component {
           <div>
             <label>
               <select onChange={this.handleChange}>
-                <option value="0">how often can you water?</option>
+                <option value="0">How often can you water?</option>
                 <option value="1">Two or three times a week - Keep the soil lightly moist</option>
                 <option value="2">Once or twice a week - Let top inch of soil dry</option>
                 <option value="3">Every one or two weeks - Let the soil dry completely</option>

@@ -28,25 +28,29 @@ class ResultGrid extends React.Component {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        width: '40%',
+        minWidth: '45%',
         margin: '25px 0'
-
-        textBox: {
-          position: 'absolute',
-          border: '2px solid #000',
-          padding: '30px 60px',
-          left: 160,
-          width: 140,
-          zIndex: '-1'
-        }
+      },
+      textBox: {
+        position: 'absolute',
+        border: '2px solid #000',
+        padding: '30px 10px 30px 150px',
+        left: 120,
+        width: 200,
+        minHeight: 120,
+        zIndex: '-1'
+      },
+      careInstr: {
+        margin: '10px 0'
       }
     }
 
-    const getImage = function (img){
+    const getImage = function(img) {
       return {
-        background: 'url('+ img + ')',
-        width: 200,
-        height: 200,
+        backgroundColor: '#fff',
+        backgroundImage: 'url('+ img + ')',
+        width: 250,
+        height: 250,
         border: '1px solid #ececec',
         borderRadius: '50%',
         backgroundSize: 'cover'
@@ -63,11 +67,21 @@ class ResultGrid extends React.Component {
           return (
             <div style={style.result} key={result.botanical_name}>
               <div id={result.english_name} style={getImage(result.image_url)}></div>
-              <div style={style.result.textBox}>
+              <div style={style.textBox}>
                 <h4>{ result.english_name }</h4>
                 <h5>{ result.botanical_name }</h5>
-                <p>{ result.frequency }</p>
-                <p>{ result.instruction }</p>
+                <div style={style.careInstr}>
+                  <h6>Frequency:</h6>
+                  <p>
+                    { result.frequency }
+                  </p>
+                </div>
+                <div style={style.careInstr}>
+                  <h6>Care Instructions:</h6>
+                  <p>
+                    { result.instruction }
+                  </p>
+                </div>
               </div>
             </div>
             )

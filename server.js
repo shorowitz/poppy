@@ -16,8 +16,11 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 
 const searchRoute = require('./api/routes/search');
+const instaRoute = require('./api/routes/insta');
 
 app.use('/search', searchRoute)
+
+app.use('/insta', instaRoute)
 
 app.use(express.static(path.resolve(__dirname, 'app')));
 

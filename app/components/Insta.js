@@ -1,6 +1,5 @@
 const React = require('react');
 const $ = require('jquery');
-const Instafeed = require('react-instafeed').default;
 
 class Insta extends React.Component {
 

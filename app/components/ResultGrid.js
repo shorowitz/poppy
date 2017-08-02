@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const $ = require('jquery');
+const ExpandedResult = require('./ExpandedResult');
 
 
 class ResultGrid extends React.Component {
@@ -60,29 +61,35 @@ class ResultGrid extends React.Component {
     }
   }
 
-    return this.props.results.map( (result, index) => {
-              return (
-                <div onClick={() => this.toggleState(index)} style={style.result} key={result.botanical_name}>
-                  <div id={result.english_name} style={getImage(result.image_url)}></div>
-                  <div style={style.textBox}>
-                    <h4>{ result.english_name }</h4>
-                    <h5>{ result.botanical_name }</h5>
-                    <div style={style.careInstr}>
-                      <h6>Frequency:</h6>
-                      <p>
-                        { result.frequency }
-                      </p>
-                    </div>
-                    <div style={style.careInstr}>
-                      <h6>Care Instructions:</h6>
-                      <p>
-                        { result.instruction }
-                      </p>
-                    </div>
+  return this.props.results.map( (result, index) => {
+            return (
+              <div onClick={() => this.toggleState(index)} style={style.result} key={result.botanical_name}>
+                <div id={result.english_name} style={getImage(result.image_url)}></div>
+                <div style={style.textBox}>
+                  <h4>{ result.english_name }</h4>
+                  <h5>{ result.botanical_name }</h5>
+                  <div style={style.careInstr}>
+                    <h6>Frequency:</h6>
+                    <p>
+                      { result.frequency }
+                    </p>
+                  </div>
+                  <div style={style.careInstr}>
+                    <h6>Care Instructions:</h6>
+                    <p>
+                      { result.instruction }
+                    </p>
                   </div>
                 </div>
-              )
-            })
+                <div> { this.state.active[index] ? (
+                  <ExpandedResult plant={ result.english_name } onClick={this.toggleState} />
+                ):(
+                  null
+                )}
+                </div>
+              </div>
+            )
+          })
   }
 
   render () {

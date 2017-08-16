@@ -37,7 +37,7 @@ class WaterOptions extends React.Component {
         }
       },
       image: {
-        background: 'url("../assets/search-image2.jpg")',
+        background: 'url("../assets/watering.jpg")',
         backgroundSize: 'cover'
       }
     }

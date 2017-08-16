@@ -30,7 +30,7 @@ class ResultGrid extends React.Component {
       const str = name.replace(/\s+/g, '-').toLowerCase();
       return {
         backgroundColor: '#fff',
-        backgroundImage: 'url('+ str + ')',
+        backgroundImage: 'url("../assets/plants/'+ str + '.jpg")',
         width: 250,
         height: 250,
         border: '1px solid #ececec',

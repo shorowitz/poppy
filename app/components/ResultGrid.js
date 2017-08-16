@@ -26,10 +26,11 @@ class ResultGrid extends React.Component {
   }
 
   _renderList() {
-    const getImage = function (img){
+    const getImage = function (name){
+      const str = name.replace(/\s+/g, '-').toLowerCase();
       return {
         backgroundColor: '#fff',
-        backgroundImage: 'url('+ img + ')',
+        backgroundImage: 'url("../assets/plants/'+ str + '.jpg")',
         width: 250,
         height: 250,
         border: '1px solid #ececec',
@@ -64,7 +65,7 @@ class ResultGrid extends React.Component {
   return this.props.results.map( (result, index) => {
             return (
               <div onClick={() => this.toggleState(index)} style={style.result} key={result.botanical_name}>
-                <div id={result.english_name} style={getImage(result.image_url)}></div>
+                <div id={result.english_name} style={getImage(result.english_name)}></div>
                 <div style={style.textBox}>
                   <h4>{ result.english_name }</h4>
                   <h5>{ result.botanical_name }</h5>
